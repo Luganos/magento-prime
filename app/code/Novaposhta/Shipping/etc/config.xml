@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-
-<root>
-    
-</root>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <example>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Novaposhta\Shipping\Model\Carrier\Novaposhta</model>
+                <name>Novaposhta shipping method</name>
+                <price>15.00</price>
+                <title>Delivery by Novaposhta</title>
+                <type>I</type>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+            </example>
+        </carriers>
+    </default>
+</config>
