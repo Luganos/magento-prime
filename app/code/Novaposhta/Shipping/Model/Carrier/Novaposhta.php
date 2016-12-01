@@ -4,13 +4,17 @@ namespace Novaposhta\Shipping\Model\Carrier;
 use Magento\Quote\Model\Quote\Address\RateRequest;
 use Magento\Shipping\Model\Rate\Result;
  
-class Example extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
+class Novaposhta extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
     \Magento\Shipping\Model\Carrier\CarrierInterface
 {
     /**
      * @var string
      */
     protected $_code = 'example';
+    
+    protected $_rateResultFactory;
+    
+    protected $_rateMethodFactory;
  
     /**
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
@@ -26,6 +30,7 @@ class Example extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
         \Psr\Log\LoggerInterface $logger,
         \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory,
         \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory,
+        \Magento\Framework\App\State $appState,    
         array $data = []
     ) {
         $this->_rateResultFactory = $rateResultFactory;
@@ -40,7 +45,25 @@ class Example extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
     {
         return ['example' => $this->getConfigData('name')];
     }
- 
+    
+    public function isTrackingAvailable() {
+        
+        
+        return TRUE;
+    }
+    
+    public function getValue($path, $scopeType = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null) {
+        
+        
+        
+    }
+    
+     public function isSetFlag($path, $scopeType = ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $scopeCode = null) {
+         
+         
+     }
+
+    
     /**
      * @param RateRequest $request
      * @return bool|Result
