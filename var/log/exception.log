@@ -1,0 +1,30 @@
+[2016-12-03 14:53:17] main.CRITICAL: exception 'Exception' with message 'Notice: Undefined property: Magento\Catalog\Model\Product\Interceptor::$Weight in C:\Apache\magento-prime.com\www\app\code\Novaposhta\Shipping\Model\Carrier\Novaposhta.php on line 72' in C:\Apache\magento-prime.com\www\vendor\magento\framework\App\ErrorHandler.php:61
+Stack trace:
+#0 C:\Apache\magento-prime.com\www\app\code\Novaposhta\Shipping\Model\Carrier\Novaposhta.php(72): Magento\Framework\App\ErrorHandler->handler(8, 'Undefined prope...', 'C:\\Apache\\magen...', 72, Array)
+#1 C:\Apache\magento-prime.com\www\vendor\magento\module-shipping\Model\Shipping.php(293): Novaposhta\Shipping\Model\Carrier\Novaposhta->collectRates(Object(Magento\Quote\Model\Quote\Address\RateRequest))
+#2 C:\Apache\magento-prime.com\www\vendor\magento\module-shipping\Model\Shipping.php(209): Magento\Shipping\Model\Shipping->collectCarrierRates('example', Object(Magento\Quote\Model\Quote\Address\RateRequest))
+#3 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\Quote\Address.php(995): Magento\Shipping\Model\Shipping->collectRates(Object(Magento\Quote\Model\Quote\Address\RateRequest))
+#4 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\Quote\Address.php(936): Magento\Quote\Model\Quote\Address->requestShippingRates()
+#5 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\Quote\Address\Total\Shipping.php(161): Magento\Quote\Model\Quote\Address->collectShippingRates()
+#6 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\Quote\TotalsCollector.php(265): Magento\Quote\Model\Quote\Address\Total\Shipping->collect(Object(Magento\Quote\Model\Quote), Object(Magento\Quote\Model\ShippingAssignment), Object(Magento\Quote\Model\Quote\Address\Total))
+#7 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\ShippingMethodManagement.php(273): Magento\Quote\Model\Quote\TotalsCollector->collectAddressTotals(Object(Magento\Quote\Model\Quote), Object(Magento\Quote\Model\Quote\Address))
+#8 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\ShippingMethodManagement.php(213): Magento\Quote\Model\ShippingMethodManagement->getShippingMethods(Object(Magento\Quote\Model\Quote), Array)
+#9 C:\Apache\magento-prime.com\www\vendor\magento\module-quote\Model\GuestCart\GuestShippingMethodManagement.php(103): Magento\Quote\Model\ShippingMethodManagement->estimateByExtendedAddress(16, Object(Magento\Quote\Model\Quote\Address))
+#10 [internal function]: Magento\Quote\Model\GuestCart\GuestShippingMethodManagement->estimateByExtendedAddress('a8f09c4911944bc...', Object(Magento\Quote\Model\Quote\Address))
+#11 C:\Apache\magento-prime.com\www\vendor\magento\module-webapi\Controller\Rest.php(307): call_user_func_array(Array, Array)
+#12 C:\Apache\magento-prime.com\www\vendor\magento\module-webapi\Controller\Rest.php(216): Magento\Webapi\Controller\Rest->processApiRequest()
+#13 C:\Apache\magento-prime.com\www\var\generation\Magento\Webapi\Controller\Rest\Interceptor.php(37): Magento\Webapi\Controller\Rest->dispatch(Object(Magento\Framework\App\Request\Http))
+#14 C:\Apache\magento-prime.com\www\vendor\magento\framework\App\Http.php(135): Magento\Webapi\Controller\Rest\Interceptor->dispatch(Object(Magento\Framework\App\Request\Http))
+#15 C:\Apache\magento-prime.com\www\vendor\magento\framework\App\Bootstrap.php(258): Magento\Framework\App\Http->launch()
+#16 C:\Apache\magento-prime.com\www\index.php(39): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+#17 {main}
+
+Next exception 'Exception' with message 'Report ID: webapi-5842dc5d7ac4a; Message: Notice: Undefined property: Magento\Catalog\Model\Product\Interceptor::$Weight in C:\Apache\magento-prime.com\www\app\code\Novaposhta\Shipping\Model\Carrier\Novaposhta.php on line 72' in C:\Apache\magento-prime.com\www\vendor\magento\framework\Webapi\ErrorProcessor.php:195
+Stack trace:
+#0 C:\Apache\magento-prime.com\www\vendor\magento\framework\Webapi\ErrorProcessor.php(139): Magento\Framework\Webapi\ErrorProcessor->_critical(Object(Exception))
+#1 C:\Apache\magento-prime.com\www\vendor\magento\module-webapi\Controller\Rest.php(219): Magento\Framework\Webapi\ErrorProcessor->maskException(Object(Exception))
+#2 C:\Apache\magento-prime.com\www\var\generation\Magento\Webapi\Controller\Rest\Interceptor.php(37): Magento\Webapi\Controller\Rest->dispatch(Object(Magento\Framework\App\Request\Http))
+#3 C:\Apache\magento-prime.com\www\vendor\magento\framework\App\Http.php(135): Magento\Webapi\Controller\Rest\Interceptor->dispatch(Object(Magento\Framework\App\Request\Http))
+#4 C:\Apache\magento-prime.com\www\vendor\magento\framework\App\Bootstrap.php(258): Magento\Framework\App\Http->launch()
+#5 C:\Apache\magento-prime.com\www\index.php(39): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+#6 {main} [] []

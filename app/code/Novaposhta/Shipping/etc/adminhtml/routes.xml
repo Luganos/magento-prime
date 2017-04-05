@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * created by Lugano
+ * Module is created for Novaposhta shipping
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="novaposhtaadmin" frontName="novaposhtaadmin">
+            <module name="Novaposhta_Shipping" before="Magento_Backend" />
+        </route>
+    </router>
+</config>
